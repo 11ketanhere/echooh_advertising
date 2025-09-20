@@ -11,56 +11,88 @@ const HomeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
 `;
 
 const Name = styled.h1`
-  font-size: 10rem;
-  font-weight: bold;
-  color: #3ccf91;
+  font-size: 12rem;
+  font-weight: 900;
+  color: #D4AF37;
   text-align: center;
+  letter-spacing: 4px;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.3);
+  background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite alternate;
 
-  letter-spacing: 2px;
-  font-family: "Londrina Shadow";
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.3);
+    }
+    to {
+      text-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.5);
+    }
+  }
 
   @media (max-width: 600px) {
-    font-size: 3rem;
+    font-size: 4rem;
+    letter-spacing: 2px;
   }
 
   @media (min-width: 600px) and (max-width: 1000px) {
-    font-size: 5rem;
+    font-size: 7rem;
+    letter-spacing: 3px;
   }
 `;
 
 const SkillText = styled.h2`
-  font-size: 5rem;
-  color: #3ccf91;
-  font-weight: bold;
+  font-size: 6rem;
+  color: #D4AF37;
+  font-weight: 700;
   text-align: center;
-  font-family: "Londrina Shadow";
-  letter-spacing: 2px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  background: linear-gradient(45deg, #D4AF37, #FFD700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 2rem;
 
   @media (max-width: 600px) {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
   }
 
   @media (min-width: 600px) and (max-width: 1000px) {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    letter-spacing: 2px;
   }
 `;
 
 const AboutText = styled.h2`
-  color: white;
-  font-size: 5rem;
+  color: #FFFFFF;
+  font-size: 4rem;
   text-align: center;
   letter-spacing: 2px;
-  font-family: "Londrina Shadow";
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  opacity: 0.9;
+  margin-bottom: 1rem;
 
   @media (max-width: 600px) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
   }
 
   @media (min-width: 600px) and (max-width: 1000px) {
     font-size: 3rem;
+    letter-spacing: 1.5px;
   }
 `;
 
@@ -68,7 +100,14 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 1rem;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 `;
 
 const Home = () => {
@@ -91,14 +130,14 @@ const Home = () => {
             data-aos-duration="1500"
             data-aos-delay="1200"
           >
-            Full Stack Developer who likes building stuff for
+            Creative Advertising Agency specializing in
           </AboutText>
           <SkillText
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-delay="1500"
           >
-            Web
+            Outdoor Advertising
           </SkillText>
         </MainContainer>
       </HomeContainer>

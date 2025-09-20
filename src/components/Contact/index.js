@@ -5,11 +5,12 @@ import { FaGithub } from "react-icons/fa";
 
 const ContactContainer = styled.div`
   height: 100vh;
-  /* background-color: black; */
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const Title = styled.h1`
@@ -51,7 +52,7 @@ const LinkItem = styled.div`
 `;
 
 const GithubIcon = styled(FaGithub)`
-  color: #3ccf91;
+  color: #D4AF37;
   font-size: 2.5rem;
 
   @media (max-width: 768px) {
@@ -60,7 +61,7 @@ const GithubIcon = styled(FaGithub)`
 `;
 
 const ResumeIcon = styled(IoDocumentTextSharp)`
-  color: #3ccf91;
+  color: #D4AF37;
   font-size: 2.5rem;
 
   @media (max-width: 768px) {
@@ -93,7 +94,7 @@ const FooterText = styled(Text)`
 `;
 
 const Highlight = styled.span`
-  color: #3ccf91;
+  color: #D4AF37;
 `;
 
 const Contact = () => {
@@ -102,37 +103,36 @@ const Contact = () => {
       <ContactContainer id="contact">
         <Title>Keep In Touch.</Title>
         <Text>
-          Feel free to get in touch and talk more about your projects.
+          Ready to own the outdoors? Let's discuss your next outdoor advertising campaign.
         </Text>
-        <Text>seyoonpuvi@gmail.com</Text>
+        <Text>echoohadvertising@gmail.com</Text>
 
         <LinkContainer>
           <LinkItem>
             <GithubIcon />
             <SubText
               as="a"
-              href="https://github.com/seyoonPuvi"
+              href="https://instagram.com/ECHOOHADVERTISING"
               target="_blank"
             >
-              Github
+              Instagram
             </SubText>
           </LinkItem>
           <LinkItem>
             <ResumeIcon />
             <SubText
               as="a"
-              href="https://drive.google.com/file/d/1hwwHAGyvbGsliqXoHujYgnRhJ3tjlHlb/view?usp=sharing"
+              href="tel:+918369422925"
               target="_blank"
-              download
             >
-              Resume
+              +91 8369422925
             </SubText>
           </LinkItem>
         </LinkContainer>
       </ContactContainer>
       <Footer>
         <FooterText>
-          Designed and Developed by <Highlight>Vignesh Pugazhenthi</Highlight>.
+          © 2024 <Highlight>Echooh Advertising</Highlight>. All rights reserved.
         </FooterText>
       </Footer>
     </>

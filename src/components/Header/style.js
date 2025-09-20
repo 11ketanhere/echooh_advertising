@@ -40,9 +40,9 @@ export const Navbar = styled.div`
 export const NavLogo = styled.h1`
   font-weight: bold;
   font-style: italic;
-  color: #3ccf91;
+  color: #D4AF37;
   font-size: 5rem;
-  font-family: "Londrina Shadow", sans-serif;
+  font-family: "Oswald", sans-serif;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 
@@ -73,7 +73,7 @@ export const NavItems = styled.a`
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 2px;
-  font-family: "Londrina Shadow";
+  font-family: "Oswald", sans-serif;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 

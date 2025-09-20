@@ -92,7 +92,7 @@ const Header = () => {
     <>
       <NavbarContainer>
         <Navbar>
-          <NavLogo>{`<VK/>`}</NavLogo>
+          <NavLogo>{`<EA/>`}</NavLogo>
           <NavItemsContainer>
             <NavItems as="a" href="#Home">
               Home

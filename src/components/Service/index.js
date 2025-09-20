@@ -28,7 +28,7 @@ const Service = () => {
           data-aos-duration="1500"
           data-aos-delay="600"
         >
-          Code that solves problems,one product at a time
+          Outdoor advertising solutions that connect brands with audiences in the most impactful way
         </Heading>
       </LeftContainer>
       <ServiceCardContainer>
@@ -38,23 +38,23 @@ const Service = () => {
           data-aos-duration="1000"
         >
           <Image src="https://cdn.sanity.io/images/y1prohws/production/1ee2839d9f4f3d19a08d9160d4b464a3dcedfb25-70x65.svg" />
-          <CardHeading>What I can do for you</CardHeading>
+          <CardHeading>What we can do for you</CardHeading>
           <CardDesc>
-            Deliver faster, better products that your users will love. Here are
-            the services I provide
+            Deliver innovative, high-visibility campaigns across multiple outdoor platforms. Here are
+            the services we provide
           </CardDesc>
           <CardListContainer>
             <CardListItem>
-              <CardItemText>Design Strategy</CardItemText>
+              <CardItemText>Billboard Advertising</CardItemText>
             </CardListItem>
             <CardListItem>
-              <CardItemText>Front-end Development</CardItemText>
+              <CardItemText>Transit Media Solutions</CardItemText>
             </CardListItem>
             <CardListItem>
-              <CardItemText>Back-end Development</CardItemText>
+              <CardItemText>Mall Branding & Activations</CardItemText>
             </CardListItem>
             <CardListItem>
-              <CardItemText>Fullstack Development</CardItemText>
+              <CardItemText>Airport Advertising</CardItemText>
             </CardListItem>
           </CardListContainer>
         </ServiceCard>
@@ -66,18 +66,17 @@ const Service = () => {
           <Image src="https://cdn.sanity.io/images/y1prohws/production/167e91631a7731d5a4301f798b8444131b08dad1-69x68.svg" />
           <CardHeading>What you can expect</CardHeading>
           <CardDesc>
-            I design products that go beyond aesthetics—they're shippable and
-            usable
+            We offer end-to-end media planning, creative design, and flawless execution that ensures your brand stands out — loud, clear, and unforgettable
           </CardDesc>
           <CardListContainer>
             <CardListItem>
-              <CardItemText>Clean and Functional</CardItemText>
+              <CardItemText>End-to-End Media Planning</CardItemText>
             </CardListItem>
             <CardListItem>
-              <CardItemText>Device and User Friendly</CardItemText>
+              <CardItemText>Creative Design Excellence</CardItemText>
             </CardListItem>
             <CardListItem>
-              <CardItemText>Efficient and Maintainable</CardItemText>
+              <CardItemText>Flawless Campaign Execution</CardItemText>
             </CardListItem>
           </CardListContainer>
         </ServiceCard>

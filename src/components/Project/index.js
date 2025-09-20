@@ -33,7 +33,7 @@ import {
 
 const Project = () => {
   const [projectInfo, setTab] = useState({
-    activeTab: "webdesign",
+    activeTab: "campaigns",
     isLoading: true,
     ToDisplay: [],
   });
@@ -115,14 +115,14 @@ const Project = () => {
           href={projectInfoView.projectDetails.link}
           target="_blank"
         >
-          live🔎
+          View Campaign🎯
         </ProjectLive>
         <GithubLink
           as="a"
           href={projectInfoView.projectDetails.githubLink}
           target="_blank"
         >
-          Github🐱‍🏍
+          Case Study📊
         </GithubLink>
       </ProjectLinkContainer>
     </ProjectInfoDetailsContainer>
@@ -193,7 +193,7 @@ const Project = () => {
           data-aos-duration="1500"
           data-aos-delay="600"
         >
-          Here are some of my selected projects worth sharing.
+          Here are some of our successful campaigns worth showcasing.
         </Heading>
       </RightContainer>
     </ProjectContainer>

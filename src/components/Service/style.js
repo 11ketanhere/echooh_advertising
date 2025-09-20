@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ServiceContainer = styled.div`
   min-height: 100vh;
   display: flex;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -27,10 +28,15 @@ export const LeftContainer = styled.div`
 
 export const Title = styled.h1`
   font-size: 12rem;
-  color: #ffffff;
-  font-family: "Catamaran", sans-serif;
-  letter-spacing: 2px;
-
+  color: #D4AF37;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(45deg, #D4AF37, #FFD700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all 0.45s ease-out;
 
   @media (min-width: 768px) and (max-width: 1200px) {
@@ -46,12 +52,13 @@ export const Title = styled.h1`
 export const Heading = styled.h1`
   font-size: 10rem;
   font-family: "Oswald";
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   white-space: normal;
   word-break: normal;
   overflow-wrap: anywhere;
   line-height: 1.2;
-  color: #8f9094;
+  color: #CCCCCC;
+  font-weight: 300;
   transition: all 0.45s ease-out;
 
   @media (min-width: 768px) and (max-width: 1200px) {
@@ -65,11 +72,13 @@ export const Heading = styled.h1`
 `;
 
 export const ServiceCardContainer = styled.div`
-  background-color: rgb(237, 242, 248);
+  background: rgba(26, 26, 26, 0.8);
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
   padding: 5rem 3rem;
+  border-left: 2px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
 
   @media (min-width: 768px) {
     width: 50%;
@@ -105,6 +114,8 @@ export const Image = styled.img`
 export const CardHeading = styled.h1`
   font-size: 3rem;
   font-family: "Oswald", sans-serif;
+  color: #D4AF37;
+  font-weight: 700;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -114,8 +125,9 @@ export const CardHeading = styled.h1`
 
 export const CardDesc = styled.p`
   font-size: 1.8rem;
-  color: black;
-  font-family: "Catamaran", sans-serif;
+  color: #CCCCCC;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
 
   @media (max-width: 768px) {
     font-size: 1.6rem;
@@ -136,9 +148,18 @@ export const CardListItem = styled.li`
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: black;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.1));
   height: 4rem;
   border-radius: 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+    border-color: #D4AF37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
 
   @media (min-width: 768px) {
     width: 50%;
@@ -147,7 +168,8 @@ export const CardListItem = styled.li`
 `;
 
 export const CardItemText = styled.p`
-  color: white;
+  color: #FFFFFF;
   font-size: 1.6rem;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
 `;

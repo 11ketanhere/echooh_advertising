@@ -14,7 +14,7 @@ const ParticlesComponent = (props) => {
       autoPlay: true,
       background: {
         color: {
-          value: "#000000",
+          value: "#0A0A0A",
         },
         image: "",
         position: "",
@@ -193,12 +193,12 @@ const ParticlesComponent = (props) => {
           },
         },
         color: {
-          value: "#fff",
+          value: "#D4AF37",
           animation: {
             h: {
               count: 0,
-              enable: false,
-              speed: 1,
+              enable: true,
+              speed: 20,
               decay: 0,
               delay: 0,
               sync: true,
@@ -367,14 +367,14 @@ const ParticlesComponent = (props) => {
           close: true,
           fill: true,
           options: {},
-          type: "circle",
+          type: "triangle",
         },
         size: {
-          value: 3,
+          value: { min: 1, max: 5 },
           animation: {
             count: 0,
-            enable: false,
-            speed: 5,
+            enable: true,
+            speed: 3,
             decay: 0,
             delay: 0,
             sync: false,
@@ -532,74 +532,7 @@ const ParticlesComponent = (props) => {
       style: {},
       themes: [],
       zLayers: 100,
-      emitters: {
-        autoPlay: true,
-        fill: true,
-        life: {
-          wait: false,
-        },
-        rate: {
-          quantity: 1,
-          delay: 7,
-        },
-        shape: {
-          options: {},
-          replace: {
-            color: false,
-            opacity: false,
-          },
-          type: "square",
-        },
-        startCount: 0,
-        size: {
-          mode: "percent",
-          height: 0,
-          width: 0,
-        },
-        particles: {
-          shape: {
-            type: "images",
-            options: {
-              images: {
-                src: "https://particles.js.org/images/cyan_amongus.png",
-                width: 500,
-                height: 634,
-              },
-            },
-          },
-          size: {
-            value: 40,
-          },
-          move: {
-            enable: true,
-            direction: "right",
-            speed: 8,
-            outModes: {
-              default: "out",
-              right: "destroy",
-            },
-            straight: true,
-          },
-          zIndex: {
-            value: 0,
-          },
-          rotate: {
-            value: {
-              min: 0,
-              max: 360,
-            },
-            animation: {
-              enable: true,
-              speed: 10,
-              sync: true,
-            },
-          },
-        },
-        position: {
-          x: 0,
-          y: 55,
-        },
-      },
+      emitters: [],
       motion: {
         disable: false,
         reduce: {
