@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/echooh_advertising/static/css/main.a857c32e.css",
+    "main.js": "/echooh_advertising/static/js/main.37dacc29.js",
+    "static/media/echooh-inspiration.png": "/echooh_advertising/static/media/echooh-inspiration.85893cae4e4d9602a630.png",
+    "static/media/echooh-logo.png": "/echooh_advertising/static/media/echooh-logo.b0ccabd276bea658de63.png",
+    "index.html": "/echooh_advertising/index.html",
+    "main.a857c32e.css.map": "/echooh_advertising/static/css/main.a857c32e.css.map",
+    "main.37dacc29.js.map": "/echooh_advertising/static/js/main.37dacc29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a857c32e.css",
+    "static/js/main.37dacc29.js"
+  ]
+}
