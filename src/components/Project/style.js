@@ -50,7 +50,7 @@ export const ProjectInfoDetailsContainer = styled(LeftContainer)`
 
 export const Title = styled.h1`
   font-size: 12rem;
-  color: #ffffff;
+  color:rgb(0, 0, 0);
   font-family: "Catamaran", sans-serif;
   letter-spacing: 2px;
 
@@ -157,7 +157,7 @@ export const ProjectLive = styled.button`
 export const GithubLink = styled(ProjectLive)``;
 
 export const Heading = styled.h1`
-  font-size: 10rem;
+  font-size: 8rem;
   font-family: "Oswald";
   letter-spacing: 1px;
   white-space: normal;

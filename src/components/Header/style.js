@@ -28,6 +28,17 @@ export const NavbarContainer = styled.div`
   align-items: center;
   padding: 1rem 0;
   width: 100%;
+  background: ${props => props.isScrolled 
+    ? 'rgba(13, 13, 13, 0.6)' 
+    : 'rgba(13, 13, 13, 0.05)'};
+  backdrop-filter: blur(${props => props.isScrolled ? '10px' : '0px'});
+  border-bottom: ${props => props.isScrolled 
+    ? '1px solid rgba(255, 183, 0, 0.09)' 
+    : 'none'};
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const Navbar = styled.div`
@@ -35,30 +46,36 @@ export const Navbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  backgroundColor: 'rgba(0, 0, 0, 0.5)'
 `;
 
 export const NavLogo = styled.h1`
-  font-weight: bold;
-  font-style: italic;
-  color: #D4AF37;
-  font-size: 5rem;
-  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+  color: #FFB800;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(255, 184, 0, 0.4);
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.05);
+    color: #FFFFFF;
+    text-shadow: 0 4px 20px rgba(255, 184, 0, 0.6);
   }
 
   @media (max-width: 600px) {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
   }
 `;
 
 export const NavItemsContainer = styled.ul`
   display: flex;
   align-items: center;
-  column-gap: 2.5rem;
+  column-gap: 2rem;
   padding-inline-start: 0;
 
   @media (max-width: 768px) {
@@ -69,23 +86,52 @@ export const NavItemsContainer = styled.ul`
 export const NavItems = styled.a`
   list-style-type: none;
   text-decoration: none;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: ${props => props.isScrolled 
+    ? '0 2px 4px rgba(0, 0, 0, 0.5)' 
+    : '0 2px 8px rgba(0, 0, 0, 0.8)'};
 
   &:hover {
-    transform: scale(1.3);
+    color: #FFB800;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 10px rgba(255, 184, 0, 0.5);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFB800;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 `;
 
 export const HamburgerMenu = styled(GiHamburgerMenu)`
   font-size: 2rem;
-  color: white;
+  color: #FFB800;
   display: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #FFFFFF;
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     display: block;

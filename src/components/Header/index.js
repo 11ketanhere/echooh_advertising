@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -13,11 +13,32 @@ import {
   MobNavItems,
   MobNavLink,
 } from "./style";
+import EA from "../Logo";
+import { ProjectImageCard } from "../Project/style";
+import EchoohLogo from '../Assets/Images/echooh-logo.png';
 
 const Header = () => {
   AOS.init();
   const [showMobNav, setShowMobNav] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const homePageHeight = window.innerHeight;
+      
+      // Change header style when scrolled past half of home page
+      if (scrollPosition > homePageHeight / 2) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const onClickNavBtn = () => {
     if (showMobNav) {
@@ -76,11 +97,21 @@ const Header = () => {
         <MobNavLink href="#about">About</MobNavLink>
       </MobNavItems>
       <MobNavItems
-        color="#CB6040"
+        color="#9B59B6"
         className={!isClosing ? "slide-in" : "slide-out"}
         duration="0.4s"
         delay="1s"
         closeDelay="0.2s"
+        onClick={onClickNavBtn}
+      >
+        <MobNavLink href="#team">Team</MobNavLink>
+      </MobNavItems>
+      <MobNavItems
+        color="#CB6040"
+        className={!isClosing ? "slide-in" : "slide-out"}
+        duration="0.4s"
+        delay="1.2s"
+        closeDelay="0s"
         onClick={onClickNavBtn}
       >
         <MobNavLink href="#contact">Contact</MobNavLink>
@@ -90,23 +121,33 @@ const Header = () => {
 
   return (
     <>
-      <NavbarContainer>
+      <NavbarContainer isScrolled={isScrolled}>
         <Navbar>
-          <NavLogo>{`<EA/>`}</NavLogo>
+          {/* <NavLogo>
+            <EA size="3rem" mobileSize="2rem" />
+          </NavLogo> */}
+            <ProjectImageCard 
+              src={EchoohLogo}
+              alt="Logo" 
+              style={{ height: '6rem', width: '6rem', padding: '2rem' }} 
+            />
           <NavItemsContainer>
-            <NavItems as="a" href="#Home">
+            <NavItems as="a" href="#Home" isScrolled={isScrolled}>
               Home
             </NavItems>
-            <NavItems as="a" href="#service">
+            <NavItems as="a" href="#service" isScrolled={isScrolled}>
               Service
             </NavItems>
-            <NavItems as="a" href="#project">
+            <NavItems as="a" href="#project" isScrolled={isScrolled}>
               Project
             </NavItems>
-            <NavItems as="a" href="#about">
+            <NavItems as="a" href="#about" isScrolled={isScrolled}>
               About
             </NavItems>
-            <NavItems as="a" href="#contact">
+            <NavItems as="a" href="#team" isScrolled={isScrolled}>
+              Team
+            </NavItems>
+            <NavItems as="a" href="#contact" isScrolled={isScrolled}>
               Contact
             </NavItems>
           </NavItemsContainer>

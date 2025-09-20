@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const ContactContainer = styled.div`
   height: 100vh;
-  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+  background: linear-gradient(135deg, #F5F5F7 0%, #FFF8E1 30%, #FFFFFF 50%, #FFF8E1 70%, #F5F5F7 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,23 +14,32 @@ const ContactContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: white;
-  font-size: 8rem;
+  color: #0D0D0D;
+  font-size: 6rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 
   @media (max-width: 768px) {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 `;
 
 const Text = styled.p`
-  color: #8f9094;
-  font-size: 2rem;
+  color: #0D0D0D;
+  font-size: 1.8rem;
   text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
+  max-width: 600px;
+  line-height: 1.6;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
 
@@ -52,8 +61,14 @@ const LinkItem = styled.div`
 `;
 
 const GithubIcon = styled(FaGithub)`
-  color: #D4AF37;
+  color: #FFB800;
   font-size: 2.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #0D0D0D;
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -61,8 +76,14 @@ const GithubIcon = styled(FaGithub)`
 `;
 
 const ResumeIcon = styled(IoDocumentTextSharp)`
-  color: #D4AF37;
+  color: #FFB800;
   font-size: 2.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #0D0D0D;
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -70,7 +91,7 @@ const ResumeIcon = styled(IoDocumentTextSharp)`
 `;
 
 const SubText = styled.p`
-  color: #ffffff;
+  color:rgb(0, 0, 0);
   font-size: 2rem;
 
   @media (max-width: 768px) {
@@ -82,11 +103,15 @@ const Footer = styled.div`
   background-color: black;
   width: 100%;
   padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const FooterText = styled(Text)`
   color: #8f9094;
   font-size: 1.5rem;
+  align-items: center;
 
   @media (max-width: 500px) {
     font-size: 1rem;
@@ -94,7 +119,9 @@ const FooterText = styled(Text)`
 `;
 
 const Highlight = styled.span`
-  color: #D4AF37;
+  color: #FFB800;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 184, 0, 0.3);
 `;
 
 const Contact = () => {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ServiceContainer = styled.div`
   min-height: 100vh;
   display: flex;
-  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+  background: linear-gradient(135deg, #F5F5F7 0%, #FFF8E1 30%, #FFFFFF 50%, #FFF8E1 70%, #F5F5F7 100%);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -27,58 +27,55 @@ export const LeftContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 12rem;
-  color: #D4AF37;
-  font-family: "Oswald", sans-serif;
+  font-size: 8rem;
+  color: #0D0D0D;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 4px;
   font-weight: 900;
-  text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(45deg, #D4AF37, #FFD700);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
   transition: all 0.45s ease-out;
 
   @media (min-width: 768px) and (max-width: 1200px) {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
   }
 `;
 
 export const Heading = styled.h1`
-  font-size: 10rem;
-  font-family: "Oswald";
-  letter-spacing: 2px;
+  font-size: 3.5rem;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
   white-space: normal;
   word-break: normal;
   overflow-wrap: anywhere;
-  line-height: 1.2;
-  color: #CCCCCC;
-  font-weight: 300;
+  line-height: 1.4;
+  color: #0D0D0D;
+  font-weight: 400;
   transition: all 0.45s ease-out;
+  opacity: 0.8;
 
   @media (min-width: 768px) and (max-width: 1200px) {
-    font-size: 8rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 `;
 
 export const ServiceCardContainer = styled.div`
-  background: rgba(26, 26, 26, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
   padding: 5rem 3rem;
-  border-left: 2px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(10px);
+  border-left: 2px solid rgba(255, 184, 0, 0.3);
+  backdrop-filter: blur(20px);
 
   @media (min-width: 768px) {
     width: 50%;
@@ -112,9 +109,9 @@ export const Image = styled.img`
 `;
 
 export const CardHeading = styled.h1`
-  font-size: 3rem;
-  font-family: "Oswald", sans-serif;
-  color: #D4AF37;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  color: #0D0D0D;
   font-weight: 700;
 
   @media (max-width: 768px) {
@@ -124,13 +121,14 @@ export const CardHeading = styled.h1`
 `;
 
 export const CardDesc = styled.p`
-  font-size: 1.8rem;
-  color: #CCCCCC;
-  font-family: "Oswald", sans-serif;
-  font-weight: 300;
+  font-size: 1.6rem;
+  color: #0D0D0D;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  opacity: 0.8;
 
   @media (max-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -148,17 +146,18 @@ export const CardListItem = styled.li`
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.1));
+  background: rgba(255, 255, 255, 0.8);
   height: 4rem;
   border-radius: 1.5rem;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 184, 0, 0.3);
+  backdrop-filter: blur(20px);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateX(10px);
-    border-color: #D4AF37;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    border-color: #FFB800;
+    box-shadow: 0 0 20px rgba(255, 184, 0, 0.3);
+    background: rgba(255, 184, 0, 0.1);
   }
 
   @media (min-width: 768px) {
@@ -168,8 +167,8 @@ export const CardListItem = styled.li`
 `;
 
 export const CardItemText = styled.p`
-  color: #FFFFFF;
-  font-size: 1.6rem;
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
+  color: #0D0D0D;
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 `;
