@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://11ketanhere.github.io/echooh_advertising",
   "name": "echooh-advertising-website",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
